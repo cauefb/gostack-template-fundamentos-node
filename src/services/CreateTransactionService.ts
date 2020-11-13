@@ -14,7 +14,7 @@ class CreateTransactionService {
     this.transactionsRepository = transactionsRepository;
   }
 
-  public execute({title, value, type}:Request): Transaction {
+  public execute({title, value, type }:Request): Transaction {
 
     if(!['income','outcome'].includes(type)){
       throw new Error('Transaction type is invalid');
